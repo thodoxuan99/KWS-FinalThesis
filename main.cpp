@@ -3,6 +3,9 @@
 #include "stm32746g_discovery_sdram.h"
 
 
+#define MBED_CONF_TARGET_STDIO_UART_TX  PC_6    // USART6_TX    
+#define MBED_CONF_TARGET_STDIO_UART_RX  PC_7    // USART6_RX
+
 typedef enum {
     BUFFER_OFFSET_NONE = 0,
     BUFFER_OFFSET_HALF = 1,
