@@ -2,6 +2,7 @@
 #include "stm32746g_discovery_audio.h"
 #include "stm32746g_discovery_sdram.h"
 #include <cstdio>
+#include <exception>
 #include <ratio>
 
 
@@ -14,6 +15,7 @@ FlagStatus record = RESET;
 FlagStatus got_command = RESET;
 uint16_t window_length = 0;                 // Size of windown by milisecond
 uint16_t start_time  = 0;
+char terminator[] = "Terminate\r\n";
 
 uint8_t temp;
 uint8_t buffer[RXBUFFER];
@@ -83,6 +85,8 @@ int main()
                 /* Copy recorded 2nd half block */
                 memcpy((uint16_t *)(AUDIO_BUFFER_OUT + (AUDIO_BLOCK_SIZE)), (uint16_t *)(AUDIO_BUFFER_IN + (AUDIO_BLOCK_SIZE)), AUDIO_BLOCK_SIZE);
                 serial.write((uint16_t *)AUDIO_BUFFER_OUT,AUDIO_BLOCK_SIZE*2,NULL);
+                serial.write((uint16_t*)"\r\n",2,NULL);
+                serial.write((uint16_t*)terminate,strlen(terminator),NULL);
             }
         }
         else{
