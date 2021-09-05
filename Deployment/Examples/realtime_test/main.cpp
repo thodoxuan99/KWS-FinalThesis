@@ -21,7 +21,6 @@
  * STM32F746NG development kit (DISCO_F746NG in mbed-cli). The example is 
  * derived from https://os.mbed.com/teams/ST/code/DISCO-F746NG_AUDIO_demo
  */
-
 #include "kws_f746ng.h"
 #include "plot_utils.h"
 #include "LCD_DISCO_F746NG.h"
@@ -78,7 +77,7 @@ void BSP_AUDIO_IN_TransferComplete_CallBack(void)
     //copy the last (frame_len - frame_shift) audio data to the start
     arm_copy_q7((q7_t *)(kws->audio_buffer)+2*(kws->audio_buffer_size-(kws->frame_len-kws->frame_shift)), (q7_t *)kws->audio_buffer, 2*(kws->frame_len-kws->frame_shift));
   }
-  // copy the new recording data 
+  // copy the new recording data
   for (int i=0;i<kws->audio_block_size;i++) {
     kws->audio_buffer[kws->frame_len-kws->frame_shift+i] = kws->audio_buffer_in[2*kws->audio_block_size+i*2];
   }
