@@ -4,7 +4,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\platform\source\CallChain.o: \
   mbed-os\platform\mbed_toolchain.h mbed-os\platform\mbed_preprocessor.h \
   mbed-os\platform\CallChain.h mbed-os\platform\Callback.h \
   mbed-os\platform\mbed_assert.h mbed-os\platform\mbed_toolchain.h \
-  mbed-os\platform\NonCopyable.h \
+  mbed-os\platform\NonCopyable.h mbed-os\platform\mbed_debug.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\cmsis.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F746xG\device\stm32f746xx.h \

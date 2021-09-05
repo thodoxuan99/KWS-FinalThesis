@@ -1,10 +1,23 @@
 #include "mbed.h"
 #include "stm32746g_discovery_audio.h"
 #include "stm32746g_discovery_sdram.h"
+#include <cstdio>
+#include <ratio>
 
 
 #define MBED_CONF_TARGET_STDIO_UART_TX  PC_6    // USART6_TX    
 #define MBED_CONF_TARGET_STDIO_UART_RX  PC_7    // USART6_RX
+#define RXBUFFER                        255
+
+Serial serial(PC_6,PC_7);
+FlagStatus record = RESET;
+FlagStatus got_command = RESET;
+uint16_t window_length = 0;                 // Size of windown by milisecond
+uint16_t start_time  = 0;
+
+uint8_t temp;
+uint8_t buffer[RXBUFFER];
+uint8_t buffer_index;
 
 typedef enum {
     BUFFER_OFFSET_NONE = 0,
@@ -18,7 +31,8 @@ typedef enum {
 #define AUDIO_BUFFER_OUT   (AUDIO_BUFFER_IN + (AUDIO_BLOCK_SIZE * 2))
 
 volatile uint32_t  audio_rec_buffer_state = BUFFER_OFFSET_NONE;
-
+FlagStatus isReceiveData(uint8_t *buffer , uint16_t buffer_len , const uint8_t * data);
+uint8_t Get_Integer_From_Buffer(uint8_t *buffer,uint8_t start_index,uint8_t end_index);
 
 int main()
 {
@@ -49,20 +63,40 @@ int main()
 
     while (1) {
         /* Wait end of half block recording */
-        while (audio_rec_buffer_state == BUFFER_OFFSET_HALF) {
+        if(record){
+            if(HAL_GetTick() - start_time > window_length){
+                record = RESET;
+            }
+            else{
+                while (audio_rec_buffer_state == BUFFER_OFFSET_HALF) {
+                }
+                audio_rec_buffer_state = BUFFER_OFFSET_NONE;
+
+                /* Copy recorded 1st half block */
+                memcpy((uint16_t *)(AUDIO_BUFFER_OUT), (uint16_t *)(AUDIO_BUFFER_IN), AUDIO_BLOCK_SIZE);
+
+                /* Wait end of one block recording */
+                while (audio_rec_buffer_state == BUFFER_OFFSET_FULL) {
+                }
+                audio_rec_buffer_state = BUFFER_OFFSET_NONE;
+
+                /* Copy recorded 2nd half block */
+                memcpy((uint16_t *)(AUDIO_BUFFER_OUT + (AUDIO_BLOCK_SIZE)), (uint16_t *)(AUDIO_BUFFER_IN + (AUDIO_BLOCK_SIZE)), AUDIO_BLOCK_SIZE);
+                serial.write((uint16_t *)AUDIO_BUFFER_OUT,AUDIO_BLOCK_SIZE*2,NULL);
+            }
         }
-        audio_rec_buffer_state = BUFFER_OFFSET_NONE;
-
-        /* Copy recorded 1st half block */
-        memcpy((uint16_t *)(AUDIO_BUFFER_OUT), (uint16_t *)(AUDIO_BUFFER_IN), AUDIO_BLOCK_SIZE);
-
-        /* Wait end of one block recording */
-        while (audio_rec_buffer_state == BUFFER_OFFSET_FULL) {
+        else{
+            if(serial.readable()){
+                buffer[buffer_index++] = serial.read(&temp,1,NULL);
+                if(isReceiveData((uint8_t*)buffer,(uint16_t)buffer_index,(uint8_t*)"\r\n")){
+                    window_length = Get_Integer_From_Buffer(buffer, 0, 1);
+                    memset(buffer,0,RXBUFFER);
+                    buffer_index = 0;
+                    start_time = HAL_GetTick();
+                    record = SET;
+                }
+            }
         }
-        audio_rec_buffer_state = BUFFER_OFFSET_NONE;
-
-        /* Copy recorded 2nd half block */
-        memcpy((uint16_t *)(AUDIO_BUFFER_OUT + (AUDIO_BLOCK_SIZE)), (uint16_t *)(AUDIO_BUFFER_IN + (AUDIO_BLOCK_SIZE)), AUDIO_BLOCK_SIZE);
     }
 }
 
@@ -101,4 +135,23 @@ void BSP_AUDIO_IN_HalfTransfer_CallBack(void)
 void BSP_AUDIO_IN_Error_CallBack(void)
 {
     printf("BSP_AUDIO_IN_Error_CallBack\n");
+}
+
+
+FlagStatus isReceiveData(uint8_t *buffer , uint16_t buffer_len , const uint8_t * data){
+	uint8_t data_length = strlen((char*)data);
+	for (uint8_t index = 0; index < data_length; index++) {
+		if(buffer[buffer_len -data_length + index]!=data[index]){
+			return RESET;
+		}
+	}
+	return SET;
+}
+
+uint8_t Get_Integer_From_Buffer(uint8_t *buffer,uint8_t start_index,uint8_t end_index){
+    uint8_t result;
+    for (uint8_t index = start_index ; index < end_index ; index++){
+        result = result*10 + (uint8_t)(buffer[index]) - 48;
+    }
+    return result;
 }

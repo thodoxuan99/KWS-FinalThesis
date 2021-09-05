@@ -6,7 +6,8 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\features\storage\kvstore\securestore\SecureStor
   mbed-os\features\mbedtls\platform\inc\platform_mbed.h \
   mbed-os\features\mbedtls\inc\mbedtls\check_config.h \
   mbed-os\features\device_key\source\DeviceKey.h \
-  mbed-os\platform\NonCopyable.h \
+  mbed-os\platform\NonCopyable.h mbed-os\platform\mbed_toolchain.h \
+  mbed-os\platform\mbed_preprocessor.h mbed-os\platform\mbed_debug.h \
   mbed-os\features\storage\kvstore\include\KVStore.h \
   mbed-os\platform\PlatformMutex.h mbed-os\rtos\Mutex.h \
   mbed-os\rtos\mbed_rtos_types.h \
@@ -18,7 +19,6 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\features\storage\kvstore\securestore\SecureStor
   mbed-os\rtos\source\TARGET_CORTEX\mbed_rtx_storage.h \
   mbed-os\rtos\source\TARGET_CORTEX\mbed_rtx_conf.h \
   mbed-os\targets\TARGET_STM\mbed_rtx.h mbed-os\platform\ScopedLock.h \
-  mbed-os\platform\mbed_toolchain.h mbed-os\platform\mbed_preprocessor.h \
   mbed-os\features\mbedtls\mbed-crypto\inc\mbedtls\aes.h \
   mbed-os\features\mbedtls\mbed-crypto\inc\mbedtls\cmac.h \
   mbed-os\features\mbedtls\mbed-crypto\inc\mbedtls\cipher.h \

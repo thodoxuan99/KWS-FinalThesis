@@ -10,8 +10,9 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\events\source\EventQueue.o: \
   mbed-os\targets\TARGET_STM\mbed_rtx.h mbed-os\platform\Callback.h \
   mbed-os\platform\mbed_assert.h mbed-os\platform\mbed_toolchain.h \
   mbed-os\platform\mbed_preprocessor.h mbed-os\platform\NonCopyable.h \
-  mbed-os\events\mbed_events.h mbed-os\events\Event.h \
-  mbed-os\events\UserAllocatedEvent.h mbed-os\platform\mbed_atomic.h \
+  mbed-os\platform\mbed_debug.h mbed-os\events\mbed_events.h \
+  mbed-os\events\Event.h mbed-os\events\UserAllocatedEvent.h \
+  mbed-os\platform\mbed_atomic.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\cmsis.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F746xG\device\stm32f746xx.h \

@@ -8,7 +8,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\rtos\source\ThisThread.o: \
   mbed-os\platform\mbed_assert.h mbed-os\platform\mbed_critical.h \
   mbed-os\platform\source\mbed_os_timer.h \
   mbed-os\platform\source\SysTimer.h mbed-os\platform\NonCopyable.h \
-  mbed-os\platform\mbed_atomic.h \
+  mbed-os\platform\mbed_debug.h mbed-os\platform\mbed_atomic.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\cmsis.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F746xG\device\stm32f746xx.h \

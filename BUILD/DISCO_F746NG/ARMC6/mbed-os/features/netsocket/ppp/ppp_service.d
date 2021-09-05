@@ -110,9 +110,10 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\features\netsocket\ppp\ppp_service.o: \
   mbed-os\rtos\source\TARGET_CORTEX\mbed_rtx_conf.h \
   mbed-os\targets\TARGET_STM\mbed_rtx.h mbed-os\platform\Callback.h \
   mbed-os\platform\mbed_assert.h mbed-os\platform\NonCopyable.h \
-  mbed-os\rtos\Semaphore.h mbed-os\rtos\Mutex.h \
-  mbed-os\platform\ScopedLock.h mbed-os\events\EventQueue.h \
-  mbed-os\events\equeue.h mbed-os\events\internal\equeue_platform.h \
+  mbed-os\platform\mbed_debug.h mbed-os\rtos\Semaphore.h \
+  mbed-os\rtos\Mutex.h mbed-os\platform\ScopedLock.h \
+  mbed-os\events\EventQueue.h mbed-os\events\equeue.h \
+  mbed-os\events\internal\equeue_platform.h \
   mbed-os\rtos\mbed_rtos_storage.h mbed-os\platform\mbed_poll.h \
   mbed-os\features\frameworks\nanostack-libservice\mbed-client-libservice\ip4string.h \
   mbed-os\features\frameworks\nanostack-libservice\mbed-client-libservice\ns_types.h \

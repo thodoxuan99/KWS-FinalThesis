@@ -12,7 +12,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\features\nfc\source\nfc\NFCControllerDriver.o: 
   mbed-os\targets\TARGET_STM\mbed_rtx.h mbed-os\platform\Callback.h \
   mbed-os\platform\mbed_assert.h mbed-os\platform\mbed_toolchain.h \
   mbed-os\platform\mbed_preprocessor.h mbed-os\platform\NonCopyable.h \
-  mbed-os\features\nfc\stack\nfc_errors.h \
+  mbed-os\platform\mbed_debug.h mbed-os\features\nfc\stack\nfc_errors.h \
   mbed-os\features\nfc\stack\transceiver\transceiver.h \
   mbed-os\features\nfc\stack\nfc_common.h \
   mbed-os\features\nfc\stack\nfc_errors.h \

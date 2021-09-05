@@ -112,7 +112,8 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\features\nanostack\nanostack-hal-mbed-cmsis-rto
   mbed-os\targets\TARGET_STM\us_ticker_defines.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\us_ticker_data.h \
   mbed-os\hal\ticker_api.h mbed-os\platform\NonCopyable.h \
-  mbed-os\events\equeue.h mbed-os\events\internal\equeue_platform.h \
+  mbed-os\platform\mbed_debug.h mbed-os\events\equeue.h \
+  mbed-os\events\internal\equeue_platform.h \
   mbed-os\rtos\mbed_rtos_storage.h \
   mbed-os\rtos\source\TARGET_CORTEX\mbed_rtx_storage.h \
   mbed-os\rtos\source\TARGET_CORTEX\rtx5\RTX\Include\rtx_os.h \

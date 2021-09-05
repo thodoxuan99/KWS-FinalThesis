@@ -101,7 +101,8 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\drivers\source\CAN.o: \
   mbed-os\hal\can_api.h mbed-os\hal\pinmap.h mbed-os\hal\can_helper.h \
   mbed-os\platform\Callback.h mbed-os\platform\mbed_assert.h \
   mbed-os\platform\PlatformMutex.h mbed-os\platform\NonCopyable.h \
-  mbed-os\rtos\Mutex.h mbed-os\rtos\mbed_rtos_types.h \
+  mbed-os\platform\mbed_debug.h mbed-os\rtos\Mutex.h \
+  mbed-os\rtos\mbed_rtos_types.h \
   mbed-os\rtos\source\TARGET_CORTEX\rtx5\Include\cmsis_os2.h \
   mbed-os\rtos\mbed_rtos1_types.h \
   mbed-os\rtos\source\TARGET_CORTEX\rtx4\cmsis_os.h \

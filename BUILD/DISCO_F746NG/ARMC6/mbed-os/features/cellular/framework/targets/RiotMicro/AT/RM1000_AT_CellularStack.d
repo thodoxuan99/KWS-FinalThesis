@@ -15,9 +15,9 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\features\cellular\framework\targets\RiotMicro\A
   mbed-os\targets\TARGET_STM\mbed_rtx.h mbed-os\platform\Callback.h \
   mbed-os\platform\mbed_assert.h mbed-os\platform\mbed_toolchain.h \
   mbed-os\platform\mbed_preprocessor.h mbed-os\platform\NonCopyable.h \
-  mbed-os\features\netsocket\nsapi_types.h mbed-os\platform\Callback.h \
-  mbed-os\drivers\UARTSerial.h mbed-os\platform\platform.h \
-  mbed-os\targets\TARGET_STM\device.h \
+  mbed-os\platform\mbed_debug.h mbed-os\features\netsocket\nsapi_types.h \
+  mbed-os\platform\Callback.h mbed-os\drivers\UARTSerial.h \
+  mbed-os\platform\platform.h mbed-os\targets\TARGET_STM\device.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F746xG\objects.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\cmsis.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx.h \

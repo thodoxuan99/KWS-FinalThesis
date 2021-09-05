@@ -15,9 +15,7 @@
         "--predefine=\"-DMBED_ROM_SIZE=0x100000\"",
         "--predefine=\"-DMBED_ROM_START=0x8000000\"",
         "--predefine=\"-DXIP_ENABLE=0\"",
-        "--remove",
-        "--show_full_path",
-        "--verbose"
+        "--show_full_path"
     ],
     "macros": [],
     "symbols": [
@@ -60,7 +58,7 @@
         "DEVICE_WATCHDOG=1",
         "EXTRA_IDLE_STACK_REQUIRED",
         "HSE_VALUE=25000000",
-        "MBED_BUILD_TIMESTAMP=1630748807.0328891",
+        "MBED_BUILD_TIMESTAMP=1630756005.064166",
         "MBED_TICKLESS",
         "STM32F746xx",
         "TARGET_CORTEX",

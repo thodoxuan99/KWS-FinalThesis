@@ -3,9 +3,10 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\platform\source\ATCmdParser.o: \
   BUILD\DISCO_F746NG\ARMC6\mbed_config.h mbed-os\platform\ATCmdParser.h \
   mbed-os\platform\Callback.h mbed-os\platform\mbed_assert.h \
   mbed-os\platform\mbed_toolchain.h mbed-os\platform\mbed_preprocessor.h \
-  mbed-os\platform\NonCopyable.h mbed-os\platform\FileHandle.h \
-  mbed-os\platform\mbed_poll.h mbed-os\platform\platform.h \
-  mbed-os\platform\mbed_retarget.h mbed-os\targets\TARGET_STM\device.h \
+  mbed-os\platform\NonCopyable.h mbed-os\platform\mbed_debug.h \
+  mbed-os\platform\FileHandle.h mbed-os\platform\mbed_poll.h \
+  mbed-os\platform\platform.h mbed-os\platform\mbed_retarget.h \
+  mbed-os\targets\TARGET_STM\device.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F746xG\objects.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\cmsis.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx.h \

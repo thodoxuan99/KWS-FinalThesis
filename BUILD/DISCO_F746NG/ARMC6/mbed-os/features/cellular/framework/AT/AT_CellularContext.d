@@ -21,7 +21,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\features\cellular\framework\AT\AT_CellularConte
   mbed-os\rtos\source\TARGET_CORTEX\rtx5\RTX\Include\rtx_os.h \
   mbed-os\rtos\source\TARGET_CORTEX\mbed_rtx_conf.h \
   mbed-os\targets\TARGET_STM\mbed_rtx.h mbed-os\platform\Callback.h \
-  mbed-os\platform\NonCopyable.h \
+  mbed-os\platform\NonCopyable.h mbed-os\platform\mbed_debug.h \
   mbed-os\features\cellular\framework\API\CellularNetwork.h \
   mbed-os\features\cellular\framework\common\CellularList.h \
   mbed-os\features\netsocket\nsapi_types.h \

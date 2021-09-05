@@ -17,7 +17,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\features\netsocket\TLSSocketWrapper.o: \
   mbed-os\rtos\source\TARGET_CORTEX\mbed_rtx_storage.h \
   mbed-os\rtos\source\TARGET_CORTEX\mbed_rtx_conf.h \
   mbed-os\targets\TARGET_STM\mbed_rtx.h mbed-os\platform\NonCopyable.h \
-  mbed-os\platform\Callback.h \
+  mbed-os\platform\mbed_debug.h mbed-os\platform\Callback.h \
   mbed-os\features\mbedtls\mbed-crypto\inc\mbedtls\platform.h \
   mbed-os\features\mbedtls\inc\mbedtls\config.h \
   mbed-os\features\mbedtls\platform\inc\platform_mbed.h \

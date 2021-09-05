@@ -98,4 +98,4 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\drivers\source\Ethernet.o: \
   mbed-os\platform\mbed_assert.h mbed-os\targets\TARGET_STM\PortNames.h \
   mbed-os\targets\TARGET_STM\us_ticker_defines.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\us_ticker_data.h \
-  mbed-os\platform\NonCopyable.h
+  mbed-os\platform\NonCopyable.h mbed-os\platform\mbed_debug.h

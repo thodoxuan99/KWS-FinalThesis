@@ -102,7 +102,8 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\components\storage\blockdevice\COMPONENT_QSPIF\
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\us_ticker_data.h \
   mbed-os\hal\qspi_api.h mbed-os\hal\pinmap.h \
   mbed-os\platform\PlatformMutex.h mbed-os\platform\NonCopyable.h \
-  mbed-os\rtos\Mutex.h mbed-os\rtos\mbed_rtos_types.h \
+  mbed-os\platform\mbed_debug.h mbed-os\rtos\Mutex.h \
+  mbed-os\rtos\mbed_rtos_types.h \
   mbed-os\rtos\source\TARGET_CORTEX\rtx5\Include\cmsis_os2.h \
   mbed-os\rtos\mbed_rtos1_types.h \
   mbed-os\rtos\source\TARGET_CORTEX\rtx4\cmsis_os.h \

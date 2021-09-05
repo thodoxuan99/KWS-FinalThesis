@@ -101,7 +101,8 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\drivers\source\SerialBase.o: \
   mbed-os\platform\Callback.h mbed-os\platform\mbed_assert.h \
   mbed-os\hal\serial_api.h mbed-os\hal\pinmap.h mbed-os\hal\buffer.h \
   mbed-os\hal\dma_api.h mbed-os\platform\NonCopyable.h \
-  mbed-os\platform\CThunk.h mbed-os\platform\internal\CThunkBase.h \
+  mbed-os\platform\mbed_debug.h mbed-os\platform\CThunk.h \
+  mbed-os\platform\internal\CThunkBase.h \
   mbed-os\platform\mbed_wait_api.h mbed-os\platform\mbed_atomic.h \
   mbed-os\platform\cxxsupport\mstd_type_traits \
   mbed-os\platform\cxxsupport\mstd_cstddef \

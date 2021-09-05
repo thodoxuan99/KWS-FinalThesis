@@ -18,9 +18,9 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\drivers\source\usb\USBCDC_ECM.o: \
   mbed-os\rtos\source\TARGET_CORTEX\mbed_rtx_storage.h \
   mbed-os\rtos\source\TARGET_CORTEX\mbed_rtx_conf.h \
   mbed-os\targets\TARGET_STM\mbed_rtx.h mbed-os\platform\NonCopyable.h \
-  mbed-os\platform\ScopedLock.h mbed-os\rtos\EventFlags.h \
-  mbed-os\events\EventQueue.h mbed-os\events\equeue.h \
-  mbed-os\events\internal\equeue_platform.h \
+  mbed-os\platform\mbed_debug.h mbed-os\platform\ScopedLock.h \
+  mbed-os\rtos\EventFlags.h mbed-os\events\EventQueue.h \
+  mbed-os\events\equeue.h mbed-os\events\internal\equeue_platform.h \
   mbed-os\rtos\mbed_rtos_storage.h mbed-os\platform\Callback.h \
   mbed-os\rtos\Thread.h mbed-os\rtos\Semaphore.h mbed-os\rtos\Mutex.h \
   mbed-os\drivers\internal\EndpointResolver.h \
